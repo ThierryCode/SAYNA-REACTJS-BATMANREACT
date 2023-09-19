@@ -5,22 +5,19 @@ export const Header = () => {
   return ( <>
   <div class="ligneGauche"></div>
     <div class="ligneDroite"></div>
-  <header className="header" id="header">
-        <div className="menuLogo">
-            <div className="logoHome"><img src={process.env.PUBLIC_URL + '/assets/icones/logohome.png'} alt="batman avec un point d'interrogation"/>
+  <header className="header w-100 d-flex flex-column justify-content-between align-items-center" id="header">
+        <div className="menuLogo container d-flex justify-content-between py-5 w-100">
+            <div className="logoHome d-flex justify-content-start w-25 px-0">
+                <img className="d-flex align-items-start "src={process.env.PUBLIC_URL + '/assets/icones/logohome.png'} alt="batman avec un point d'interrogation"/>
             </div>
-            <NavLink>
-                <nav className="menu" id="menu">
-                    <ul className="container ">
-                        <NavLink className ="NavLinks" to="/"> Home</NavLink>
-                        <NavLink className ="NavLinks" to="/game">GAME</NavLink>
-                        <NavLink className ="NavLinks" to="/eshop">E-SHOP</NavLink>
-                        <NavLink className ="NavLinks" to="/MonCompte">MON COMPTE</NavLink>
-                    </ul>
-                </nav>
+            <NavLink className="d-flex justify-content-evenly w-50">
+                <NavLink className ="NavLinks" to="/"> Home</NavLink>
+                <NavLink className ="NavLinks" to="/game">GAME</NavLink>
+                <NavLink className ="NavLinks" to="/eshop">E-SHOP</NavLink>
+                <NavLink className ="NavLinks" to="/MonCompte">MON COMPTE</NavLink>
             </NavLink>
         </div>
-        <div className="hr"></div>
+        <div className="hr w-80 "></div>
         <div className="headerIntroButton">
             <div className="intro">
                 <p className="introText">Au nom de ses parents assassinés, Bruce Wayne mène une guerre éternelle contre les
