@@ -15,6 +15,7 @@ function App() {
           <Route path='/Eshop' element={<Eshop />}/>
           <Route path='/MonCompte' element={<MonCompte />}/>
           <Route path='/game' element={<Game />}/>
+
         </Route>
       </Routes>
     </BrowserRouter>

@@ -5,79 +5,6 @@
   margin: 0;
   padding: 0;
 }
-
-Header{
-  width: 100%;
-  height: 100vh;
-  background-image: url("../public/assets/bg/bg_1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.logoHome {
-  width: 50%;
-  height: 100%;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  padding: 0 150px;
-}
-.logoHome img:hover,
-.navIcon img:hover {
-  filter: brightness(0) saturate(100%) invert(88%) sepia(44%) saturate(1037%) hue-rotate(356deg) brightness(107%) contrast(106%);
-}
-.hr {
-  width: 85%;
-  height: 4px;
-  background-color: rgba(196, 196, 196, 0.2823529412);
-}
-a {
-  text-decoration: none;
-  font-family: "Rajdhani";
-}
-.NavLinks {
-  align-items: center;
-  line-height: 100%;
-  color: #ffffff;
-  font-size: 36px;
-  font-family: "Rajdhani";
-  text-decoration: none;
-}
-.NavLinks::after {
-  content: "";
-  display: block;
-  margin: 0 0;
-  width: 0%;
-  height: 2px;
-  background-color: #f1f1f1;
-  transition: all 0.2s ease-in-out;
-}
-.NavLinks:hover {
-  font-weight: bold;
-  filter: brightness(0) saturate(100%) invert(88%) sepia(44%) saturate(1037%) hue-rotate(356deg) brightness(107%) contrast(106%);
-}
-.NavLinks:hover::after {
-  content: "";
-  display: block;
-  margin: 0 0;
-  width: 100%;
-  height: 2px;
-  background-color: #f1f1f1;
-  transition: all 0.2s ease-in-out;
-}
-ul {
-  padding-right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style: none;
-}
-li{
-  list-style: none;
-}
 .ligneGauche {
   width: 2px;
   height: 100%;
@@ -89,7 +16,199 @@ li{
 .ligneDroite {
   width: 2px;
   height: 100%;
-  position: fixed;
+  position: absolute;
   right: 7.5%;
   border-left: 4px solid rgba(196, 196, 196, 0.2823529412);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  width: 150px;
+  right: 0%;
+  z-index: 999;
+  height: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.navIcon{
+  width: 100%;
+  height: 20%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+Header{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0px;
+}
+
+.menuLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 200px;
+  border-top: none;
+  border-bottom: none;
+  /* background-color: blue; */
+}
+.logoHome {
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoHome img:hover,
+.navIcon img:hover {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(44%) saturate(1037%) hue-rotate(356deg) brightness(107%) contrast(106%);
+}
+
+.Navigation{
+  width: 50%;
+  height: 100%;
+  padding-right: 20px;
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  list-style: none;
+  /* background-color: #f1f1f1b6; */
+}
+.forButton{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.NavLinkBox{
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.NavLinks {
+  align-items: center;
+  line-height: 100%;
+  color: #ffffff;
+  font-size: 2em;
+  font-family: "Rajdhani";
+  text-decoration: dashed;}
+.menuLogo a{
+  text-decoration: none;
+}
+.NavLinks:hover {
+  font-weight: bold;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(44%) saturate(1037%) hue-rotate(356deg) brightness(107%) contrast(106%);
+}
+.NavLinks::after {
+  content: "";
+  display: block;
+  margin: 0 0;
+  width: 0%;
+  height: 4px;
+  background-color: #f1f1f1;
+  transition: all 0.2s ease-in-out;
+}
+.NavLinks.active::after {
+  content: "";
+  display: block;
+  margin-top: 0;
+  margin: 0 0;
+  width: 100%;
+  height: 4px;
+  background-color: #f1f1f1;
+  transition: all 0.2s ease-in-out;
+}
+.NavLinks:hover::after {
+  content: "";
+  display: block;
+  margin: 0 0;
+  width: 100%;
+  height: 4px;
+  background-color: #f1f1f1;
+  transition: all 0.2s ease-in-out;
+}
+.ImageBackGroundHome{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../public/assets/bg/Bathome1.png");
+}
+.hr {
+  width: 85%;
+  height: 4px;
+  background-color: rgba(196, 196, 196, 0.2823529412);
+}
+/*Home*/
+.headerIntroButton .intro {
+  width: 85%;
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: 100;
+  padding: 200px 310px 20px;
+  text-align: center;
+  border-top: none;
+  border-bottom: none;
+  font-family: "Space Grotesk";
+}
+.headerIntroButton .intro span {
+  font-family: "Space Grotesk";
+  display: block;
+  font-size: larger;
+  font-weight: 700;
+  margin: 50px;
+  padding-top: 10px;
+}
+/*Eshop*/
+.ImageBackroundShop{
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../public/assets/bg/bg_1.png");
+}
+.ImageBackroundGame{
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../public/assets/bg/Batgame_1.png");
+}
+.IntroShop{
+  width: 85%;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 100;
+  padding: 350px 150px 20px 100px;
+  text-align: center;
+  border-top: none;
+  border-bottom: none;
+  /* background-color: blue; */
+}
+.introTextShop{
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Rajdhani";
+}
+.Textintro{
+  width: 85%;
+  padding-left: 60px;
+  text-align: left;
+
 }
