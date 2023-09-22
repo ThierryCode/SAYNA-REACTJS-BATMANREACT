@@ -1,4 +1,5 @@
 import React from 'react'
+import {Filter} from "./Filter/Filter"
 export const Eshop = () => {
   return (
       <>
@@ -9,6 +10,7 @@ export const Eshop = () => {
             Récupérez le flow de <br />
             Batman avec notre e-shop!
           </h1>
+          <Filter />
           </div>
           </div>
         </div>
