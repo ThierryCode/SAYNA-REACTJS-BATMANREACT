@@ -16,12 +16,13 @@
 .ligneDroite {
   width: 2px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   right: 7.5%;
   border-left: 4px solid rgba(196, 196, 196, 0.2823529412);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 .icon {
   width: 150px;
@@ -221,15 +222,7 @@ footer {
   flex-direction: column;
   background-color: #000000;
 }
-footer {
-  width: 100%;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #000000;
-}
+
 .warnerBros {
   margin: 10px;
 }
@@ -257,4 +250,45 @@ footer {
 .Icones img:hover {
   filter: brightness(0) saturate(100%) invert(88%) sepia(44%) saturate(1037%)
     hue-rotate(356deg) brightness(107%) contrast(106%);
+}
+/*------Catalogue-------*/
+.catalogue{
+  width: 100%;
+  height: auto;
+  padding: 200px auto;
+  color: #f1f1f1;
+  background-color: #000000;
+}
+
+/*------End Catalogue-------*/
+
+.Filter{
+  width: 25%;
+background-color: aqua;
+}
+.Catalogue{
+  width: 75%;
+  background-color: rgb(0, 4, 255);
+}
+.cardList{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Card{
+  width: 33%;
+  height: 400px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #f1f1f1;
+}
+.Card img{
+  width: 250px;
 }
