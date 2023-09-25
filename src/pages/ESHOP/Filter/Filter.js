@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {useState, useEffect} from 'react'
 export const Filter = ()=> {
-  const [showCateg, setShowCateg] = useState(false);
-  const [showUnivers, setShowUnivers] = useState(false);
-  const [showCouleur, setShowCouleur] = useState(false);
+  const [showCateg, setShowCateg] = useState(true);
+  const [showUnivers, setShowUnivers] = useState(true);
+  const [showCouleur, setShowCouleur] = useState(true);
   return (
   <><div className="containerFilter">
     <div className="Filter">
