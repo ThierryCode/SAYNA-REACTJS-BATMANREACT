@@ -14,7 +14,7 @@ export const Eshop = () => {
             </div>
           </div>
         </div>
-        <div className='CatalFilter container d-flex align-items-center justify-content-center'>
+        <div className='CatalFilter container-fluid'>
           <Filter className="Filter "/>
           <Catalogue />
         </div>

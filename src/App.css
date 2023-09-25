@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 9999;
 }
 .icon {
   width: 150px;
@@ -51,6 +51,7 @@ Header{
   align-items: center;
   flex-direction: column;
   padding-top: 0px;
+  box-shadow: inset 0 0 7em 5em #000;
 }
 
 .menuLogo {
@@ -206,6 +207,7 @@ Header{
   font-size: 2em;
   font-weight: bold;
   font-family: "Rajdhani";
+  text-transform: uppercase;
 }
 .Textintro{
   width: 85%;
@@ -252,43 +254,251 @@ footer {
     hue-rotate(356deg) brightness(107%) contrast(106%);
 }
 /*------Catalogue-------*/
-.catalogue{
-  width: 100%;
+.allProduct{
+  width: 750px;
   height: auto;
   padding: 200px auto;
   color: #f1f1f1;
   background-color: #000000;
-}
-
-/*------End Catalogue-------*/
-
-.Filter{
-  width: 25%;
-background-color: aqua;
-}
-.Catalogue{
-  width: 75%;
-  background-color: rgb(0, 4, 255);
-}
-.cardList{
-  width: 100%;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+/*------End Catalogue-------*/
+.catalogue{
+  width: 100%;
+  height: auto;
+  /* background-color: #890008; */
+  display: flex;
+  align-items: left;
+}
+.Filter{
+  width: 25%;
+  min-width: 300px;
+  padding-top: 100px ;
+  padding-left: 20px ;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #f1f1f1;  
+  font-family: "Rajdhani";
+}
+.cardList{
+  /* padding-right: 5px; */
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  /* background-color: aqua; */
 }
 .Card{
-  width: 33%;
-  height: 400px;
+  width: 200px;
+  height: auto;
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #f1f1f1;
 }
 .Card img{
-  width: 250px;
+  width: 100%;
+}
+.infoProduct{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid #f1f1f1;
+  margin-bottom: 20px;
+
+}
+.Button {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: none;
+}
+.Button button {
+  width: 100%;
+  height: 50px;
+  color: #f1f1f1;
+  line-height: 100%;
+  border: none;
+  font-family: "rajdhani", "sans-serif";
+  font-size: 1.3em;
+  text-transform: uppercase;
+  background: linear-gradient(273.81deg, rgba(137, 0, 8, 0.6) 0%, rgba(252, 232, 216, 0.4) 100%);
+}
+.Button button:hover {
+  background: linear-gradient(273.81deg, #890008 0%, #fce8d8 100%);
+}
+button>a {
+  font-family: "rajdhani", "sans-serif";
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  color: #ffffff;
+}
+.caddy{
+  color: #ffffff;
+  width: 100%;
+  padding: 20px 50px 50px;
+  height: auto;
+  color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.resTri{
+  width: 100%;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.resTri p{
+  font-family: "rajdhani", "sans-serif";
+  width: 100px;
+  height: auto;
+}
+.CatalFilter{
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-color: #000000;
+}
+.Filter h2{
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Rajdhani";
+}
+.checkItems, .checkUnivers{
+  display: block;
+  width: 200px;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  accent-color: red;
+}
+.containerFilter{
+  width: 30%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #890008; */
+}
+input[type="range"]{
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  height: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+  -webkit-appearance: none;
+  height: 5px;
+}
+input[type="range"]::-moz-track{
+  -moz-appearance: none;
+  height: 5px;
+}
+input[type="range"]::-ms-track{
+  appearance: none;
+  height: 5px;
+}
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #890008;
+  border-radius: 50%;
+  /* pointer-events: auto; */
+  cursor: pointer;
+  margin-top: -8px;
+  border: none;
+}
+input[type="range"]::-moz-range-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #890008;
+  border-radius: 50%;
+  /* pointer-events: auto; */
+  cursor: pointer;
+  margin-top: -8px;
+  border: none;
+}
+input[type="range"]::-ms-thumb{
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #890008;
+  border-radius: 50%;
+  /* pointer-events: auto; */
+  cursor: pointer;
+  margin-top: -8px;
+  border: none;
+}
+input[type="range"]:active::-webkit-slider-thumb{
+  background-color: red;
+  /* border: 3px solid #f1f1f1; */
+}
+#priceValue{
+  text-align: center;
+}
+.sideFilter{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow-y: auto;
+  transition: 0.6s ease;
+  transition-property: left;
+}
+.sideFilter.active{
+  left: 0;
+ }
+ .sideFilter .Menu{
+  width: 100%;
+  margin-top: 80px;
+ }
+ .sideFilter .Menu .item{
+  position: relative;
+  cursor: pointer;
+ }
+.hrFilter{
+  border: 1px solid #ffffff;
+  margin-bottom: 20px;
+}
+.dropdownCateg p, .dropdownUnivers p{
+  cursor: pointer;
 }
