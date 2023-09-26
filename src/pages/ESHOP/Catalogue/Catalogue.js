@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useContext } from 'react';
+import { shopContext } from '../../../context/ShopContext';
 
-export const Catalogue = () => {
+export const Catalogue = (props) => {
+  const {id, productName, price, productImage} = props.data;
+  const {addToCart, cartItems} = useContext(shopContext);
+  const cartItemAmount = cartItems[id];
   return (
     <>
     <div className="allProduct">
@@ -13,194 +18,20 @@ export const Catalogue = () => {
         <p className="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Trier par
         </p>
-        <ul className="dropdown-menu">
-          <li><a className="dropdown-item" href="#">Prix croissant</a></li>
-          <li><a className="dropdown-item" href="#">Prix decroissant</a></li>
-          <li><a className="dropdown-item" href="#">Les meilleurs ventes</a></li>
-          <li><a className="dropdown-item" href="#">Autres ...</a></li>
-        </ul>
+
       </div>
     </div>
       <div className="catalogue ">
           <ul className='cardList'>
             <li className="Card col-3">
               <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
+              <img src={productImage} alt="produit" />
+                <p className="productName">{productName}</p>
+                <p className="productPrice">{price}$</p>
               </div>
               <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
-              </div>
-            </li> 
-            <li className="Card col-3">
-              <div className="infoProduct">
-                <img src={process.env.PUBLIC_URL + '/assets/images/article_1.png'} alt="produit" />
-                <p className="productName">Name</p>
-                <p className="productPrice">000$</p>
-              </div>
-              <div className="Button">
-                <button>Ajouter au panier</button>
+                <button onClick = {() => addToCart(id)}>
+                Ajouter au panier {cartItemAmount > 0 && <>({cartItemAmount})</>}</button>
               </div>
             </li> 
           </ul>
