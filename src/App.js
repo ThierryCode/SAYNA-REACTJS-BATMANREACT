@@ -5,9 +5,11 @@ import { Home } from './pages/Home';
 import {Eshop} from './pages/ESHOP/Eshop'
 import {MonCompte} from './pages/MonCompte/components/MonCompte'
 import { Game } from './pages/Game';
+import { ShopContextProvider } from './context/shopContext';
 function App() {
   return (
     <>
+    <ShopContextProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -19,6 +21,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </ShopContextProvider>
     </>
   );
 }

@@ -1,14 +1,14 @@
-import product1 from './images/article_1.png'
-import product2 from './images/article_2.png'
-import product3 from './images/article_3.png'
-import product4 from './images/article_4.png'
-import product5 from './images/article_5.png'
-import product6 from './images/article_6.png'
-import product7 from './images/article_7.png'
-import product8 from './images/article_8.png'
-import product9 from './images/article_9.png'
-import product10 from './images/article_10.png'
-export const PRODUCT = [
+import product1 from '../../images/article_1.png'
+import product2 from '../../images/article_2.png'
+import product3 from '../../images/article_3.png'
+import product4 from '../../images/article_4.png'
+import product5 from '../../images/article_5.png'
+import product6 from '../../images/article_6.png'
+import product7 from '../../images/article_7.png'
+import product8 from '../../images/article_8.png'
+import product9 from '../../images/article_9.png'
+import product10 from '../../images/article_10.png'
+export const PRODUCTS = [
     {
         id: 1,
         productName:"Mug Voyage",
