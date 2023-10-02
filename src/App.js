@@ -6,7 +6,7 @@ import {Eshop} from './pages/ESHOP/Eshop'
 import {MonCompte} from './pages/MonCompte/components/MonCompte'
 import { Game } from './pages/Game';
 import { ShopContextProvider } from './context/shopContext';
-import { Cart } from "./pages/ESHOP/Cart/Cart"
+
 function App() {
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
           <Route path='/Eshop' element={<Eshop />}/>
           <Route path='/MonCompte' element={<MonCompte />}/>
           <Route path='/game' element={<Game />}/>
-          <Route path='/Eshop/Cart' element={<Cart />}/>
+
         </Route>
       </Routes>
     </BrowserRouter>

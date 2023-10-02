@@ -1,7 +1,12 @@
 import React from 'react'
 import {Filter} from "./Filter/Filter"
 import{Catalogue} from"./Catalogue/Catalogue"
+
+import { Cart } from './Cart/Cart';
+import { useState} from 'react';
 export const Eshop = () => {
+  const [showCart, setShowCart] = useState(false)
+
   return (
       <div>
         <div className="ImageBackroundShop">
@@ -14,13 +19,24 @@ export const Eshop = () => {
             </div>
           </div>
         </div>
+        <div className="caddy">
+          <p>path</p>
+          <div className="imgCaddy">
+            <div onClick={()=>{
+              setShowCart(!showCart);
+            }}> 
+              <img src={process.env.PUBLIC_URL + '/assets/icones/caddy.png'} alt="icone caddy"/>
+            </div >
+          </div>
+        </div>
+              {showCart && <Cart />}
+
+          {!showCart && 
         <div className='CatalFilter container-fluid'>
           <Filter className="Filter "/>
           <Catalogue />
         </div>
-        <div className="panier">
-          
-        </div>
+          }
       </div>
     );
 }
