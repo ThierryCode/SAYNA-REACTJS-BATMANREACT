@@ -8,6 +8,8 @@ import product7 from '../../images/article_7.png'
 import product8 from '../../images/article_8.png'
 import product9 from '../../images/article_9.png'
 import product10 from '../../images/article_10.png'
+import product11 from '../../images/batmobile_lego.jpg'
+import product12 from '../../images/jouet_Batman.jpg'
 export const PRODUCTS = [
     {
         id: 1,
@@ -68,5 +70,17 @@ export const PRODUCTS = [
         productName:"Figurine",
         price:10.0,
         productImage:product10,
+    },
+    {
+        id: 11,
+        productName:"Batmobile Légo",
+        price:22.0,
+        productImage:product11,
+    },
+    {
+        id: 12,
+        productName:"Jouet Batman",
+        price:22.0,
+        productImage:product12,
     },
 ]

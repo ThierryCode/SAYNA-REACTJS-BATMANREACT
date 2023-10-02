@@ -18,6 +18,9 @@ export const Eshop = () => {
           <Filter className="Filter "/>
           <Catalogue />
         </div>
+        <div className="panier">
+          
+        </div>
       </div>
     );
 }
