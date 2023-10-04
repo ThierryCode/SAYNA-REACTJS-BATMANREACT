@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react';
 import { shopContext } from '../../../../context/shopContext';
+import {AiOutlineHeart} from 'react-icons/ai'
 export const Product = (props) => {
   const {id, productName, price, productImage} = props.data;
   const {addToCart, cartItems} = useContext(shopContext);
@@ -12,8 +13,9 @@ export const Product = (props) => {
           <div className="badgeCoeur">
             
           </div>
+            <AiOutlineHeart className='heart'/>
           <div className="imageProduct">
-        <img src={productImage} alt="produit" />
+            <img src={productImage} alt="produit" />
           </div>
           <p className="productName">{productName}</p>
           <p className="productPrice">{price}$</p>

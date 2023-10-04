@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
+import {MdKeyboardArrowRight} from 'react-icons/md'
 export const Filter = ()=> {
   const [showCateg, setShowCateg] = useState(true);
   const [showUnivers, setShowUnivers] = useState(true);
   const [showCouleur, setShowCouleur] = useState(true);
+
   return (
   <><div className="containerFilter">
     <div className="Filter">
@@ -12,11 +14,14 @@ export const Filter = ()=> {
       <input type="range" id="prix" name="prix" min="0" max="200" step="1" />
       <p id="priceValue">0</p>
       <div className="dropdownCateg">
-        <p onClick={()=>{
-          setShowCateg(!showCateg);
-        }}>
-          Categorie <i className="bi bi-caret-right" ></i>
-        </p>
+      <div className="dropDownTitle" onClick={()=>{
+            setShowCateg(!showCateg);
+            }}>        
+          <p >
+            Categorie 
+          </p>
+          <MdKeyboardArrowRight/>
+      </div>
         <div className="hrFilter"></div>
         {showCateg && <div className="CategCheck Menu">
         <li className="checkItems">
@@ -58,13 +63,13 @@ export const Filter = ()=> {
       </div>}
       </div>
       <div className="dropdownCateg">
-
-      </div>
-      <p onClick={()=>{
-          setShowCouleur(!showCouleur);
-        }}>Couleur
-        <i className="bi bi-caret-right" ></i>
-        </p>
+        <div className="dropDownTitle" onClick={()=>{
+            setShowCouleur(!showCouleur);
+            }}>
+          <p >Couleur
+          </p>
+          <MdKeyboardArrowRight />
+        </div>
       <div className="hrFilter"></div>
       {showCouleur &&         
       <div className="ColorCheck">
@@ -89,11 +94,15 @@ export const Filter = ()=> {
             <label htmlFor="">Autres couleur</label>
         </div> 
       </div>}
+      </div>
       <div className="dropdownCateg">
-      <p onClick={()=>{
-          setShowUnivers(!showUnivers);
-        }}>Univers <i className="bi bi-caret-right" ></i>
-        </p>
+        <div className="dropDownTitle" onClick={()=>{
+            setShowUnivers(!showUnivers);
+            }}>
+          <p >Univers 
+          </p> 
+          <MdKeyboardArrowRight />
+        </div>
         <div className="hrFilter"></div>
         {showUnivers &&         
       <div className="UniversCheck">

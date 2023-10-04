@@ -567,6 +567,11 @@ input[type="range"]:active::-webkit-slider-thumb{
   text-transform: uppercase;
   background: linear-gradient(273.81deg, rgba(2, 62, 112, 0.4) 0%, rgba(110, 184, 245, 0.4) 100%);
 }
+.cartButton button a{
+  color: #f1f1f1;
+  line-height: 100%;
+  text-decoration: none;
+}
 .infosPersNewsLetter{
   /* border-left: 1px solid #f1f1f1; */
   width: 40%;
@@ -696,4 +701,35 @@ input[type="range"]:active::-webkit-slider-thumb{
 }
 .cart h4{
   color: #890008;
+}
+
+.dropDownTitle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.activeArrow{
+  animation: rotateArrow 0.2s linear;
+}
+@keyframes rotateArrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.heart{
+  margin-left: 150px;
+  position: absolute;
+  margin-top: -240px;
+  color: #890008;
+  font-size: 22px;
+  cursor: pointer;
+}
+.crumbs{
+  font-family: "rajdhani", "sans-serif";
+  text-decoration: none;
+  color: #f1f1f1;
 }

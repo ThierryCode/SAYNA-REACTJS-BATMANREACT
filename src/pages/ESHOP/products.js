@@ -20,19 +20,19 @@ export const PRODUCTS = [
     {
         id: 2,
         productName:"Poster Batman (2022)",
-        price:999.0,
+        price:19.0,
         productImage:product2,
     },
     {
         id: 3,
         productName:"Mug",
-        price:999.0,
+        price:18.0,
         productImage:product3,
     },
     {
         id: 4,
         productName:"Mug",
-        price:999.0,
+        price:18.0,
         productImage:product4,
     },
     {

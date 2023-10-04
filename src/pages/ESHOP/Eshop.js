@@ -1,11 +1,12 @@
-import React from 'react'
-import {Filter} from "./Filter/Filter"
-import{Catalogue} from"./Catalogue/Catalogue"
-
+import React from 'react';
+import {Filter} from "./Filter/Filter";
+import{Catalogue} from"./Catalogue/Catalogue";
 import { Cart } from './Cart/Cart';
 import { useState} from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import { EshopLayout } from './EshopLayout/EshopLayout';
 export const Eshop = () => {
-  const [showCart, setShowCart] = useState(false)
+  const [showCart, setShowCart] = useState(true)
 
   return (
       <div>
@@ -22,21 +23,14 @@ export const Eshop = () => {
         <div className="caddy">
           <p>path</p>
           <div className="imgCaddy">
-            <div onClick={()=>{
-              setShowCart(!showCart);
-            }}> 
-              <img src={process.env.PUBLIC_URL + '/assets/icones/caddy.png'} alt="icone caddy"/>
-            </div >
+       
+            <Link to="Cart">
+                <img src={process.env.PUBLIC_URL + '/assets/icones/caddy.png'} alt="icone caddy"/>
+            </Link>
           </div>
         </div>
-              {showCart && <Cart />}
 
-          {!showCart && 
-        <div className='CatalFilter container-fluid'>
-          <Filter className="Filter "/>
-          <Catalogue />
-        </div>
-          }
+              <Outlet />
       </div>
     );
 }

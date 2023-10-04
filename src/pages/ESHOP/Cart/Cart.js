@@ -3,6 +3,7 @@ import { PRODUCTS } from '../products';
 import { shopContext } from '../../../context/shopContext';
 import { CartItem } from './cart-item';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export const Cart = () => {
   const {cartItems, getSousTotal} = useContext(shopContext);
   const total = getSousTotal();
@@ -24,8 +25,12 @@ export const Cart = () => {
           {total > 0 ? (
           <div className="cartButton">
                 <button onClick={()=>retour("/Eshop")}>Continuer mes achats</button>
-                <button>Passer la commande</button>
-          </div>) : (<h4>Vous n'avez pas passé de commande</h4>)}
+                <button><Link to = "/Eshop/OrderHistory" >Passer la commande</Link></button>
+          </div>) : (<div className="cartButton">
+            <h4>Vous n'avez pas passé de commande</h4>
+            <button onClick={()=>retour("/Eshop")}>Revenir au Catalogue</button>
+            </div>
+            )}
         </div>
     </>
   )
